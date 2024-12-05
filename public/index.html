@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokebook</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+        }
+        #jokes {
+            margin-top: 20px;
+        }
+        #joke-form {
+            margin-top: 20px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+            cursor: pointer;
+            color: #007BFF;
+        }
+        li:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Jokebook</h1>
+
+    <!-- Random Joke -->
+    <h2>Random Joke</h2>
+    <h3 id="random-joke">Loading...</h3>
+
+    <!-- Fetch Categories -->
+    <div>
+        <h2>Categories</h2>
+        <button id="fetch-categories">View Categories</button>
+        <ul id="categories"></ul>
+    </div>
+
+    <!-- Jokes Section -->
+    <div id="jokes"></div>
+
+    <!-- Add New Joke -->
+    <form id="joke-form">
+        <h3>Add a New Joke</h3>
+        <label>
+            Category: <input type="text" id="category" required />
+        </label>
+        <br>
+        <label>
+            Setup: <input type="text" id="setup" required />
+        </label>
+        <br>
+        <label>
+            Delivery: <input type="text" id="delivery" required />
+        </label>
+        <br>
+        <button type="submit">Add Joke</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
